@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import HomeScreen from './screens/HomeScreen';
+import GameScreen from './screens/GameScreen';
+import RuleModal from './components/RuleModal';
 
-function App() {
+const App = () => {
+  const [currentScreen, setCurrentScreen] = useState('HOME');
+  const [isHermitMode, setIsHermitMode] = useState(false);
+  const [activeRuleMode, setActiveRuleMode] = useState(null);
+
+  const handleStartGame = (hermitMode) => {
+    setIsHermitMode(hermitMode);
+    setCurrentScreen('GAME');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {activeRuleMode && (
+        <RuleModal 
+          mode={activeRuleMode} 
+          onClose={() => setActiveRuleMode(null)} 
+        />
+      )}
+
+      {currentScreen === 'HOME' ? (
+        <HomeScreen 
+          onStartGame={handleStartGame} 
+          onShowRules={(mode) => setActiveRuleMode(mode)} 
+        />
+      ) : (
+        <GameScreen 
+          isHermitMode={isHermitMode} 
+          onBackToHome={() => setCurrentScreen('HOME')} 
+        />
+      )}
+    </>
   );
-}
+};
 
 export default App;
