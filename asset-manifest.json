@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ultimate-ox-game-react/static/css/main.e6c13ad2.css",
+    "main.js": "/ultimate-ox-game-react/static/js/main.afaa4c41.js",
+    "static/js/453.2524bad1.chunk.js": "/ultimate-ox-game-react/static/js/453.2524bad1.chunk.js",
+    "index.html": "/ultimate-ox-game-react/index.html",
+    "main.e6c13ad2.css.map": "/ultimate-ox-game-react/static/css/main.e6c13ad2.css.map",
+    "main.afaa4c41.js.map": "/ultimate-ox-game-react/static/js/main.afaa4c41.js.map",
+    "453.2524bad1.chunk.js.map": "/ultimate-ox-game-react/static/js/453.2524bad1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.afaa4c41.js"
+  ]
+}
