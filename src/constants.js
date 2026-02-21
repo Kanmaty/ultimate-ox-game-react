@@ -37,8 +37,8 @@ export const COLORS = {
 export const COMMON_STYLES = {
   container: {
     fontFamily: '"Hiragino Mincho ProN", "Yu Mincho", "YuMincho", serif',
-    display: 'flex',
-    justifyContent: 'center',
+flexDirection: 'column',
+    alignItems: 'center',
     backgroundColor: COLORS.bg,
     minHeight: '100vh',
     padding: '20px',
